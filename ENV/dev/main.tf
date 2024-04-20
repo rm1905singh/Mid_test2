@@ -59,3 +59,9 @@ module "mlb" {
   lbs        = var.lbs
 
 }
+module "mkv" {
+  depends_on = [ module.mrgs ]
+  source = "../../../modules/10KV"
+  kvs = var.kvs
+  
+}
